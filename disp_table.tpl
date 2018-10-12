@@ -13,7 +13,39 @@
 	%for company in sa:
 		<tr>
 			<td>
-				{{company}}
+				%if company =="Atlantsolía":
+					<a href="/Atlantsolía"> Atlantsolía</a>
+				%end
+				
+				%if company =="Costco Iceland":
+				<a href="/Costco Iceland"> Costco Iceland</a>
+				%end
+				
+				%if company =="Dælan":
+				<a href="/Dælan">Dælan</a>
+				%end
+
+				%if company =="N1":
+				<a href="/N1">N1</a>
+				%end
+
+				%if company =="ÓB":
+				<a href="/ÓB">ÓB</a>
+				%end
+
+				%if company =="Olís":
+				<a href="Olís">Olís</a>
+				%end
+
+				%if company =="Orkan":
+				<a href="Orkan">Orkan</a>
+				%end
+
+				%if company =="Orkan X":
+				<a href="Orkan X">Orkan X</a>
+				%end 
+
+
 			</td>
 		</tr>
 	%end
