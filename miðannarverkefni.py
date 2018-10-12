@@ -3,7 +3,8 @@ import bottle
 from bottle import *
 bottle.debug(True)
 import json
-from bottle import route, run , template, static_file , error
+from bottle import route, run , template, static_file 
+from bottle import error
 import requests
 
 main_api = "http://apis.is/petrol"
@@ -109,7 +110,7 @@ def serve_homepage():
 @route('/<felag>')
 def serve_felag(felag):
     return template('felaga_table',fjoldi_st=len(felaga_dict(mydict_bensin,felag)),rows_1 = felaga_dict(mydict_bensin,felag),
-                    rows_2=  felaga_dict(mydict_disel,felag), cases = fjöldi, dagsetning = dags(ar,man,da
+                    rows_2=  felaga_dict(mydict_disel,felag), cases = fjöldi, dagsetning = dags(ar,man,da))
 
 
 
