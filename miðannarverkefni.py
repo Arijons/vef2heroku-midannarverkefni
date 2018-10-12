@@ -3,7 +3,7 @@ import bottle
 from bottle import *
 bottle.debug(True)
 import json
-from bottle import route, run , template, static_file
+from bottle import route, run , template, static_file , error
 import requests
 
 main_api = "http://apis.is/petrol"
@@ -109,16 +109,19 @@ def serve_homepage():
 @route('/<felag>')
 def serve_felag(felag):
     return template('felaga_table',fjoldi_st=len(felaga_dict(mydict_bensin,felag)),rows_1 = felaga_dict(mydict_bensin,felag),
-                    rows_2=  felaga_dict(mydict_disel,felag), cases = fjöldi, dagsetning = dags(ar,man,da))
+                    rows_2=  felaga_dict(mydict_disel,felag), cases = fjöldi, dagsetning = dags(ar,man,da
 
 
 
 
 
-
-
-
-
+@error(404)
+def error404(error):
+    return 'Hér er ekkert'
+                                                                                                
+@error(500)
+def error500(error):
+    return 'Hér þarf að laga forrit'
 
 
 
