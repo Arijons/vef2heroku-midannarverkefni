@@ -120,7 +120,9 @@ def serve_felag(felag):
 def error404(error):
     return 'Hér er ekkert'
      
-
+@error(500)
+def error500(error):
+    return 'ekkert er í forritinu'
 
 
 @route('/static/<filename>')
