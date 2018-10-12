@@ -118,10 +118,7 @@ def serve_felag(felag):
 @error(404)
 def error404(error):
     return 'Hér er ekkert'
-                                                                                                
-@error(500)
-def error500(error):
-    return 'Hér þarf að laga forrit'
+     
 
 
 
